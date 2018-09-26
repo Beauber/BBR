@@ -64,3 +64,8 @@
 #   { service_type: 'Acrylic/Silk Extensions', sub_category_id: 11 }, 
 #   { service_type: 'Nail Art', sub_category_id: 11 }, 
 # ])
+
+ProviderType.create([
+  {provider_type: "Salon"},
+  {provider_type: "Independent"}
+])

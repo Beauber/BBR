@@ -117,20 +117,15 @@ $(document).ready(function() {
       password_confirmation: null
     };
     validateForm();
-    console.log(params);
     if (formIsReady) {
-      console.log("Form is ready");
-
       axios.post("/v1/providers", params).then(function(response) {
         var successMessage = response.data.message;
         window.alert(successMessage);
-        console.log(successMessage);
       }
       ).catch(
         function(error) {
           var errorMessage = error.response.data.errors;
           window.alert(errorMessage);
-          console.log(errorMessage);
         }
       );
     }
