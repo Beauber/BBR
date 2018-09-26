@@ -7,6 +7,6 @@ class Provider < ApplicationRecord
   validates :last_name, presence: true
   validates :phone_number, presence: true
   validates :zip, presence: true
-  validates :provider_type, presence: true
+  validates :provider_type_id, presence: true
   validates :email, presence: true, uniqueness: true  
 end
