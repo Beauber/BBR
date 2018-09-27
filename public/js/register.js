@@ -119,13 +119,24 @@ $(document).ready(function() {
     validateForm();
     if (formIsReady) {
       axios.post("/v1/providers", params).then(function(response) {
-        var successMessage = response.data.message;
-        window.alert(successMessage);
+        // Redirect to confirmation page
+        window.location = "/registration-confirmation";
       }
       ).catch(
         function(error) {
+          // Add errors in red to modal and display modal
           var errorMessage = error.response.data.errors;
-          window.alert(errorMessage);
+          var errorList = [];
+          errorMessage.forEach(function(msg) {
+            $('.error-list').append("<li>" + msg + "</li>");
+          });
+          $('.modal').css("display", "block");
+
+          // Close modal when user clicks anywhere on page and empty error list until next submit
+          $('body').on("click", function() {
+            $('.modal').css("display", "none");
+            $('.error-list').html("");
+          });
         }
       );
     }

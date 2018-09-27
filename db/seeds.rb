@@ -65,7 +65,7 @@
 #   { service_type: 'Nail Art', sub_category_id: 11 }, 
 # ])
 
-ProviderType.create([
-  {provider_type: "Salon"},
-  {provider_type: "Independent"}
-])
+# ProviderType.create([
+#   {provider_type: "Salon"},
+#   {provider_type: "Independent"}
+# ])

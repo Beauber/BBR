@@ -18,6 +18,7 @@
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<!-- RESPONSIVE.CSS ONLY FOR MOBILE AND TABLET VIEWS -->
 	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -40,7 +41,21 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="tz-register">
+
+	<!-- Error Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3>There was an issue with your registration:</h3>
+      <div class="errors">
+        <ul class="error-list">
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal -->
+
 		<div class="log-in-pop">
 			<div class="log-in-pop-right">
 				<h4>Create an Account</h4>
@@ -115,28 +130,18 @@
 	</section>
 	<!--FOOTER SECTION-->
 	<footer id="colophon" class="site-footer clearfix">
-		<div id="quaternary" class="sidebar-container " role="complementary">
-			<div class="sidebar-inner">
-				<div class="widget-area clearfix">
-					<div id="azh_widget-2" class="widget widget_azh_widget">
-						<div data-section="section">
-							<div class="container">
-								<div class="row">
-									<div class="col-sm-4 col-md-3 foot-logo"> <img src="images/beauber-logo.png" alt="logo">
-										<p class="hasimg">Your go-to resource to find a beauty or barber professional.</p>
-										<p class="hasimg">Clients: Find a professional near you to provide the specific service you need from hair to nails to makeup to beards...</p>
-										<p class="hasimg">Professionals: Connect with clients in your area in need of the specific services you offer.</p>
-									</div>
-								</div>
-							</div>
-						</div>
+		<div data-section="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-md-3 foot-logo reg-footer"> 
+						<img src="images/beauber-logo.png" alt="logo">
+						<p class="hasimg">Your go-to resource to find a beauty or barber professional.</p>
+						<p class="hasimg">Clients: Find a professional near you to provide the specific service you need from hair to nails to makeup to beards...</p>
+						<p class="hasimg">Professionals: Connect with clients in your area in need of the specific services you offer.</p>
 					</div>
 				</div>
-				<!-- .widget-area -->
 			</div>
-			<!-- .sidebar-inner -->
 		</div>
-		<!-- #quaternary -->
 	</footer>
 	<!--COPY RIGHTS-->
 	<section class="copy">
@@ -144,7 +149,6 @@
 			<p>Copyright © 2018 Beauber LLC &nbsp;All rights reserved. </p>
 		</div>
 	</section>
-	<!--QUOTS POPUP-->
 	<!--SCRIPT FILES-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/angular.min.js"></script>

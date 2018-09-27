@@ -8292,3 +8292,1045 @@ Processing by V1::ProvidersController#create as HTML
 Completed 201 Created in 64ms (Views: 0.1ms | ActiveRecord: 3.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-09-27 14:06:23 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/zackfrank/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/zackfrank/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:21:21 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (1.9ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 62ms (Views: 0.3ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:24:50 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.4ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 62ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:29:01 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.4ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 61ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:30:31 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.2ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 59ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:32:18 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.3ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 60ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:34:13 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.4ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 63ms (Views: 0.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:34:57 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.7ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 59ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:35:26 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.2ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 58ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:35:39 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.3ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 61ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:35:51 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.2ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 60ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:36:24 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"1", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.3ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 62ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:36:36 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"1", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.2ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 59ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:36:48 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"1", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.4ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 61ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:37:01 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.3ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 60ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:38:04 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.3ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 61ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:39:56 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.4ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 57ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:40:07 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"1", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.4ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 61ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:40:15 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"1", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.3ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 60ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:41:42 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.3ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 60ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:41:44 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.3ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 57ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:41:46 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.2ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 59ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:42:42 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.3ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 61ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:42:44 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.2ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 57ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:42:45 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.3ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 57ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:42:47 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.2ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 56ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/regisration-confirmation" for 127.0.0.1 at 2018-09-27 14:48:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/regisration-confirmation"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-27 14:48:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:49:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/regisration-confirmation" for 127.0.0.1 at 2018-09-27 14:52:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/regisration-confirmation"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-27 14:52:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:52:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:52:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:52:15 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"frank.zack@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"frank.zack@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.4ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "frank.zack@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 59ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:52:27 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"zfam@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"zfam@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.4ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "zfam@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Create (0.5ms)[0m  [1m[32mINSERT INTO "providers" ("email", "password_digest", "first_name", "last_name", "phone_number", "zip", "provider_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "zfam@gmail.com"], ["password_digest", "$2a$10$QqaBtMBzUJtdXHBYTj6pvOZH6W0CQFXWhl4FpLqBxFZQONU8mdwRe"], ["first_name", "Zack"], ["last_name", "Frank"], ["phone_number", "7405077529"], ["zip", "60657"], ["provider_type_id", 2], ["created_at", "2018-09-27 19:52:27.320070"], ["updated_at", "2018-09-27 19:52:27.320070"]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 201 Created in 62ms (Views: 0.2ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:52:49 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"zfam@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"zfam@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.2ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "zfam@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 400 Bad Request in 59ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:53:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/v1/providers" for 127.0.0.1 at 2018-09-27 14:54:11 -0500
+Processing by V1::ProvidersController#create as HTML
+  Parameters: {"first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2", "email"=>"zacksean@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "provider"=>{"email"=>"zacksean@gmail.com", "first_name"=>"Zack", "last_name"=>"Frank", "phone_number"=>"7405077529", "zip"=>"60657", "provider_type_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProviderType Load (0.2ms)[0m  [1m[34mSELECT  "provider_types".* FROM "provider_types" WHERE "provider_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "providers" WHERE "providers"."email" = $1 LIMIT $2[0m  [["email", "zacksean@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[36mProvider Create (0.2ms)[0m  [1m[32mINSERT INTO "providers" ("email", "password_digest", "first_name", "last_name", "phone_number", "zip", "provider_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "zacksean@gmail.com"], ["password_digest", "$2a$10$RqaObDVLjjA4cPCQoz89ve2b7sVXNv985ho6S/lrcVRT1AO3dRufq"], ["first_name", "Zack"], ["last_name", "Frank"], ["phone_number", "7405077529"], ["zip", "60657"], ["provider_type_id", 2], ["created_at", "2018-09-27 19:54:11.593465"], ["updated_at", "2018-09-27 19:54:11.593465"]]
+  ↳ app/controllers/v1/providers_controller.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/providers_controller.rb:14
+Completed 201 Created in 60ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:54:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:56:16 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:56:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:56:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:56:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:56:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:57:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:57:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:58:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 14:58:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 15:00:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 15:01:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 15:02:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/regisration-confirmation" for 127.0.0.1 at 2018-09-27 15:02:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/regisration-confirmation"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 15:02:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 15:02:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/js/angular.min.js.map" for 127.0.0.1 at 2018-09-27 15:03:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/js/angular.min.js.map"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
