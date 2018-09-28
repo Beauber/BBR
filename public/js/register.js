@@ -119,8 +119,21 @@ $(document).ready(function() {
     validateForm();
     if (formIsReady) {
       axios.post("/v1/providers", params).then(function(response) {
-        // Redirect to confirmation page
-        window.location = "/registration-confirmation";
+        // Change center element from reg form to confirmation message
+        $('.log-in-pop-right').fadeOut(1500);
+        setTimeout(function() {
+          $('.log-in-pop-right').html("");
+          $('.log-in-pop-right').css("text-align", "center");
+          $('.tz-register').css(
+            {
+              "padding-top": "200px", 
+              "padding-bottom": "200px"
+            });
+          $('.log-in-pop-right').html(
+            "<h4>Congratulations!</h4><p>Your Beauber account is confirmed!</p><p>We will reach out soon once more features are made available!</p>"
+          );
+          $('.log-in-pop-right').fadeIn(1500);
+        }, 1500);
       }
       ).catch(
         function(error) {
