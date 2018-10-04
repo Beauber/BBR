@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post "provider_token" => "provider_token#create"
   post "/users" => "users#create"
   post "/providers" => "providers#create"
 

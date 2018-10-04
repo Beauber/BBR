@@ -1,3 +1,9 @@
+
+/* --------------------------- 
+    REGISTRATION PAGE CSS 
+--------------------------- */
+
+
 .error-message {
   margin-top: 2px;
   color: red;
@@ -49,4 +55,67 @@
 .reg-footer {
   float: none;
   margin: auto;
+}
+
+.login {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.log-in-btn:hover {
+  background-color: #ea0d3d;
+}
+
+/* ------- Welcome Modal ---------- */
+
+.modal-logo {
+  width: 70%;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.user-div, .provider-div {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-top: 40px;
+}
+
+.user-btn, .provider-btn {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  width: 23rem;
+  font-size: 1.3em;
+}
+
+.welcome-modal {
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.welcome {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  
+  .modal-logo {
+    width: 80%;
+    border-radius: 5px;
+    margin-bottom: 8px;
+  }
+
+  .welcome {
+    width: 60%;
+  }
+  
+}
+
+@media screen and (max-width: 767px) {
+
+  .welcome {
+    width: 90%;
+  }
+
 }

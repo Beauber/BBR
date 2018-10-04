@@ -2,8 +2,78 @@
 
 $(document).ready(function() {
 
+  /* ---------------------------------------------------------------
+
+    This section governs the display of the Welcome Modal and which
+    registration form to display - the form for providers or users
+
+  BOTH REQUIRE: 
+
+        FIRST NAME, LAST NAME, EMAIL, PASSWORD, PW CONFIRMATION
+
+  PROVIDERS ALSO REQUIRES:
+
+                    ZIP, PHONE NUMBER, PROVIDER TYPE
+  
+   --------------------------------------------------------------- */
+
+  var provider = false;
+  var url;
   var params;
   var formIsReady;
+
+  $('.welcome-modal').css("display", "block");
+
+  // IF REGISTERING USER:
+  $('.user-btn').click(function() {
+    url = "/v1/users";
+    $('.welcome-modal').fadeOut();
+    $('#zip-code').hide();
+    $('#provider-type').hide();
+    $('#phone-number').hide();
+    params = {
+      first_name: null,
+      last_name: null,
+      email: null,
+      password: null,
+      password_confirmation: null
+    };
+  });
+
+  // IF REGISTERING PROVIDER
+  $('.provider-btn').click(function() {
+    provider = true;
+    url = "/v1/providers";
+    $('.welcome-modal').fadeOut();
+    params = {
+      first_name: null,
+      last_name: null,
+      phone_number: null,
+      zip: null,
+      provider_type_id: null,
+      email: null,
+      password: null,
+      password_confirmation: null
+    };
+    function validateForm() {
+      formIsReady = true;
+      validateFirstName($('#firstName').val());
+      validateLastName($('#lastName').val());
+      validatePhoneNumber($('#phoneNumber').val());
+      validateZip($('#zip').val());
+      validateProviderType($('#providerType').val());
+      validateEmail($('#email').val());
+      validatePassword($('#password').val());
+      validatePasswordConfirmation($('#passwordConfirmation').val(), $('#password').val());
+    }
+  });
+
+
+  /*  ------------------------------------------------------------
+
+      This section governs the PROVIDERS registration form
+
+  ------------------------------------------------------------ */ 
 
   function validateFirstName(firstName) {
     if (firstName) {
@@ -93,32 +163,33 @@ $(document).ready(function() {
     }
   }
 
+  
   function validateForm() {
     formIsReady = true;
     validateFirstName($('#firstName').val());
     validateLastName($('#lastName').val());
-    validatePhoneNumber($('#phoneNumber').val());
-    validateZip($('#zip').val());
-    validateProviderType($('#providerType').val());
     validateEmail($('#email').val());
     validatePassword($('#password').val());
     validatePasswordConfirmation($('#passwordConfirmation').val(), $('#password').val());
+    
+    if (provider) {
+      validatePhoneNumber($('#phoneNumber').val());
+      validateZip($('#zip').val());
+      validateProviderType($('#providerType').val());
+    }
   }
 
-  $('.log-in-btn').on('click', function() {
-    params = {
-      first_name: null,
-      last_name: null,
-      phone_number: null,
-      zip: null,
-      provider_type_id: null,
-      email: null,
-      password: null,
-      password_confirmation: null
-    };
+  $('.reg-button').on('click', function() {
+    console.log("clicked");
+    params;
     validateForm();
+    console.log("formIsReady:", formIsReady);
+    console.log("params:", params);
+    console.log("url:", url);
     if (formIsReady) {
-      axios.post("/v1/providers", params).then(function(response) {
+      axios.post(url, params).then(function(response) {
+        console.log("web request");
+
         // Change center element from reg form to confirmation message
         $('.log-in-pop-right').fadeOut(1500);
         setTimeout(function() {
@@ -137,17 +208,19 @@ $(document).ready(function() {
       }
       ).catch(
         function(error) {
+          console.log("errors");
+
           // Add errors in red to modal and display modal
           var errorMessage = error.response.data.errors;
           var errorList = [];
           errorMessage.forEach(function(msg) {
             $('.error-list').append("<li>" + msg + "</li>");
           });
-          $('.modal').css("display", "block");
+          $('.error-modal').css("display", "block");
 
           // Close modal when user clicks anywhere on page and empty error list until next submit
           $('body').on("click", function() {
-            $('.modal').css("display", "none");
+            $('.error-modal').css("display", "none");
             $('.error-list').html("");
           });
         }
