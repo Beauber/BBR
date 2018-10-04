@@ -66,6 +66,24 @@
   background-color: #ea0d3d;
 }
 
+.follow {
+  height: auto; 
+  width: auto; 
+  max-width: 50px;
+}
+
+.foot-social {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.foot-social ul li {
+  float: none;
+  padding-right: none;
+  margin: auto;
+  display: inline-block;
+}
+
 /* ------- Welcome Modal ---------- */
 
 .modal-logo {
