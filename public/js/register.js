@@ -28,6 +28,7 @@ $(document).ready(function() {
   $('.user-btn').click(function() {
     url = "/v1/users";
     $('.welcome-modal').fadeOut();
+    $('#registration-headline').html("Create a User Account");
     $('#zip-code').hide();
     $('#provider-type').hide();
     $('#phone-number').hide();
@@ -45,6 +46,7 @@ $(document).ready(function() {
     provider = true;
     url = "/v1/providers";
     $('.welcome-modal').fadeOut();
+    $('#registration-headline').html("Create a Service Provider Account");
     params = {
       first_name: null,
       last_name: null,
