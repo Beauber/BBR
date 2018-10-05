@@ -1,6 +1,29 @@
+/* --------------------------- 
+        TEMP HOME PAGE 
+--------------------------- */
+
+.temp-homepage {
+  background-color: black;
+}
+
+#homepage-logo {
+  height: 8em;
+  margin: auto;
+}
+
+.hpl {
+  position:absolute;
+  top:50%;
+  left:50%;
+  padding:15px;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
 
 /* --------------------------- 
-    REGISTRATION PAGE CSS 
+      REGISTRATION PAGE 
 --------------------------- */
 
 
