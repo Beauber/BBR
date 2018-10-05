@@ -198,7 +198,7 @@
      -moz-box-shadow: 0 1px 3px #960;
      box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.47);
      border-bottom: 1px solid #111a29;
-     background: black;
+     background: #030606;
      display: none;
 }
  .c2-hide {
@@ -1212,7 +1212,7 @@
 /* = FOOTER 
 /*-------------------------------------------------*/
  footer {
-     background: black;
+     background: #030606;
 }
  footer {
      color: #9a9a9a;
