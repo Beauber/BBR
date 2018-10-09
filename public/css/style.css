@@ -3653,7 +3653,7 @@
 /*-------------------------------------------------------*/
  .pg-list-1 {
      margin-top: 60px;
-     background: url(../images/list-deta/bg.jpg) no-repeat;
+     background: url(../images/profile-header.jpg) no-repeat;
      background-size: cover;
      position: relative;
      padding: 250px 0px 70px 0px;
@@ -4228,7 +4228,7 @@
  .pglist-p-com-ti-right {
 }
  .pglist-p-com-ti-right h3 {
-     background: #20334c;
+     background: #030606;
      color: #fff;
      font-size: 15px;
 }
@@ -4237,7 +4237,8 @@
      font-size: 15px;
 }
  .pg-list-user-pro {
-     background: url('../images/profile-bg.jpg') no-repeat;
+     /*background: url('../images/profile-bg.jpg') no-repeat;*/
+     background: #030606;
      height: 100px;
      background-size: cover;
 }
@@ -4264,7 +4265,7 @@
      font-size: 15px;
 }
  .list-pg-upro a {
-     background: #f44336;
+     background: #f4364f;
 }
  .list-pg-map {
 }

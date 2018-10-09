@@ -1,5 +1,6 @@
 class Provider < ApplicationRecord
   has_secure_password
+  
   belongs_to :provider_type
   has_many :provider_services
   has_many :services, through: :provider_services

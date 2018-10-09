@@ -41,7 +41,6 @@ $(document).ready(function() {
       }
     };
     validateForm();
-    console.log(params);
 
     if (formIsReady) {      
       axios.post("/provider_token", params).then(function(response) {
@@ -51,11 +50,10 @@ $(document).ready(function() {
         // localStorage.setItem("id", response.data.provider.id);
         // localStorage.setItem("first_name", response.data.provider.first_name);
         // localStorage.setItem("email", response.data.provider.email);
-        window.location("/profile");
+        window.location = "/profile";
       })
         .catch(
           function(error) {
-            console.log(error);
             var errorMessage = error.response.data.errors;
             var errorList = [];
             errorMessage.forEach(function(msg) {

@@ -18,4 +18,5 @@ class V1::ProvidersController < ApplicationController
     end
 
   end
+
 end
