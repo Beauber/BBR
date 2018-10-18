@@ -19,4 +19,15 @@ class V1::ProvidersController < ApplicationController
 
   end
 
+  # before_action :authenticate_user
+  def index
+    providers = Provider.all
+    render json: providers.as_json
+  end
+
+  def show
+    # provider = Provider.find(params[:id])
+    render json: current_provider.as_json
+  end
+
 end

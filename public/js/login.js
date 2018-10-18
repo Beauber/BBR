@@ -46,10 +46,8 @@ $(document).ready(function() {
       axios.post("/provider_token", params).then(function(response) {
         axios.defaults.headers.common["Authorization"] =
           "Bearer " + response.data.jwt;
-        // localStorage.setItem("jwt", response.data.jwt);
+        localStorage.setItem("jwt", response.data.jwt);
         // localStorage.setItem("id", response.data.provider.id);
-        // localStorage.setItem("first_name", response.data.provider.first_name);
-        // localStorage.setItem("email", response.data.provider.email);
         window.location = "/profile";
       })
         .catch(

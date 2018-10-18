@@ -8,7 +8,11 @@ class ProviderTokenController < Knock::AuthTokenController
     if provider && provider.authenticate(password)
       body = {
         jwt: auth_token.token,
-        provider: { id: provider.id, name: provider.first_name, email: provider.email }
+        provider: { 
+          id: provider.id, 
+          firstName: provider.first_name, 
+          email: provider.email 
+        }
       }
       render json: body, status: :created
     else
