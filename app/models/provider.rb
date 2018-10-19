@@ -28,7 +28,7 @@ class Provider < ApplicationRecord
       zip: zip,
       phone_number: formatted_phone_number,
       provider_type: provider_type,
-      services: services,
+      services: services.as_json,
       member_since: member_since
     }
   end

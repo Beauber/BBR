@@ -98,14 +98,32 @@
 						</div>
 						<!--END LISTING DETAILS: LEFT PART 1-->
 						<!--LISTING DETAILS: LEFT PART 2-->
+						
+						<!-- ADD SERVICES Modal -->
+					  <div id="modal" class="modal services-modal">
+					    <div class="modal-content">
+					    	<h2>Select Your Services...</h2>
+					  		<!-- <img src="images/beauber-logo.png" alt="" class="modal-logo"> -->
+					      <div class="input-field s4 user-div">
+									<select name="select-services" class="serviceList">
+										<option value="">Select a service...</option>
+									</select>
+								</div>
+								<div class="input-field s4 provider-div">
+									<input type="submit" value="SUBMIT" class="waves-effect waves-light log-in-btn submit-btn"> 
+								</div>
+					    </div>
+					  </div>
+					  <!-- End of Modal -->
+
+
 						<div class="pglist-p2 pglist-bg pglist-p-com" id="ld-ser">
 							<div class="pglist-p-com-ti">
-								<h3><span>Services</span> Offered</h3> </div>
+								<h3 class="services-header"><span>Services</span> Offered <img src="images/edit.png" alt="add services image" id="edit-pencil"></h3> </div>
 							<div class="list-pg-inn-sp">
 								<!-- <p>Taj Luxury Hotels & Resorts provide 24-hour Business Centre, Clinic, Internet Access Centre, Babysitting, Butler Service in Villas and Seaview Suite, House Doctor on Call, Airport Butler Service, Lobby Lounge </p> -->
 								<div class="row pg-list-ser">
-									<ul>
-										<li>List of Services</li>
+									<ul class="services">
 										<!-- <li class="col-md-4">
 											<div class="pg-list-ser-p1"><img src="images/services/ser1.jpg" alt="" /> </div>
 											<div class="pg-list-ser-p2">
@@ -148,7 +166,7 @@
 							<div class="list-pg-inn-sp">
 								<div class="list-pg-upro">
 									<h5 class="name">PROVIDER NAME</h5>
-									<p>Member since <span class="date">DATE</span></p> <a class="waves-effect waves-light btn-large full-btn list-pg-btn contact-provider" href="#!">Contact Provider</a> </div>
+									<p>Member since <span class="date">DATE</span></p> <a class="waves-effect waves-light btn-large full-btn list-pg-btn contact-provider" href="">Contact Provider</a> </div>
 							</div>
 						</div>
 						<!--END LISTING DETAILS: LEFT PART 7-->

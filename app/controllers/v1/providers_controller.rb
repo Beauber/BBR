@@ -30,4 +30,11 @@ class V1::ProvidersController < ApplicationController
     render json: current_provider.as_json
   end
 
+  def update
+    provider = current_provider
+    provider.update(params)
+
+    render json: provider.as_json
+  end
+
 end
