@@ -281,5 +281,6 @@ label.service-labels {
 @media screen and (max-width: 534px) {
   .choose-services {
     width: 98%;
+    background-color: rgba(255, 255, 255, 1);
   }
 }
