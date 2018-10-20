@@ -171,7 +171,100 @@
       PROFILE PAGE 
 --------------------------- */
 
+.services-modal, .selected-category-modal {
+  z-index: 999;
+}
+
+.services-modal h2, .selected-category-modal h2 {
+  margin-bottom: 20px;
+  background-color: black;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.selected-category-modal h2 {
+  text-transform: uppercase;
+}
+
 #edit-pencil {
   height: 15px;
-  /*visibility: hidden;*/
+  opacity: 0.3;
+}
+
+.services-icon {
+  height: 125px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: background-color, 1s;
+}
+
+.services-icon:hover {
+  background-color: grey;
+  opacity: 0.3;
+}
+
+.service-icon-divs {
+  display: inline-block;
+}
+
+.centered-description {
+  transition: .5s ease;
+  opacity: 0;
+  top: 55%;
+  padding-left: 64px;
+  position: absolute;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif
+}
+
+.service-icon-divs:hover .centered-description {
+  opacity: 1;
+}
+
+label.service-labels {
+  display: block;
+  font-size: 16px;
+  margin: auto;
+  text-align: left;
+}
+
+.submit-btn {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* -------------------------------------
+ CHOOSE SERVICES MODAL RESPONSIVENESS 
+ --------------------------------------*/
+
+@media screen and (max-width: 1355px) {
+  .choose-services {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1086px) {
+  .choose-services {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 903px) {
+  .choose-services {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 534px) {
+  .choose-services {
+    width: 98%;
+  }
 }

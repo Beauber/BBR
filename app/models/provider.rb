@@ -11,6 +11,15 @@ class Provider < ApplicationRecord
   validates :provider_type_id, presence: true
   validates :email, presence: true, uniqueness: true
 
+  def update_services(service_ids)
+    service_ids.each { |sid|
+      ps = ProviderService.new
+      ps.service_id = sid
+      ps.provider_id = self.id
+      ps.save
+    }
+  end
+
   def formatted_phone_number
     phone_number.insert(0, "(").insert(4, ")").insert(8, "-")
   end

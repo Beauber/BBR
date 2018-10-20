@@ -16,15 +16,10 @@ $(document).ready(function() {
   var providerType;
   var services;
   var memberSince;
+  var serviceList;
 
   axios.get("v1/services/").then(function(response) {
-    var serviceList = response.data;
-    $.each(serviceList, function(key, value) {
-      $('.serviceList').append($("<option></option>")
-        .attr("value", value.service_type)
-        .text(value.service_type)); 
-    });
-    console.log(serviceList);
+    serviceList = response.data;
   });
   // var apiKey = ENV["ZIP_API_KEY"]; // needs configuration for HEROKU
 
@@ -46,24 +41,61 @@ $(document).ready(function() {
   }
 
 
-
   /*----------------------------
           ADD SERVICES
-  ----------------------------*/ 
+  ----------------------------*/
 
-  $('#edit-pencil').hide();
+  // SELECT A CATEGORY
   $('.services-header').hover(function() {
-    $('#edit-pencil').toggle();
+    $('#edit-pencil').css("opacity", 1);
+    $(this).on("mouseleave", function() {
+      $('#edit-pencil').css("opacity", 0.3);
+    });
   });
 
   $('#edit-pencil').click(function() {
     $('.services-modal').show();
   });
 
-  $('.submit-btn').click(function() {
-    // logic here
+  // CLOSE SELECT MODAL AND OPEN/POPULATE MODAL FOR SELECTED CATEGORY
+  $('.services-icon').click(function() {
     $('.services-modal').hide();
+    $('.selected-category-modal').show();
+    var selected = $(this).attr("id");
+    $(".selected-category-heading").text(selected);
+    var selectedCategoryServices = [];
+
+    // Populate checklist for selected category
+    serviceList.map(function(service) {
+      if (service.category.toLowerCase() === selected.toLowerCase()) {
+        selectedCategoryServices.push(service);
+        $('.checkboxes')
+          .append($(document.createElement('input')).attr({
+            type:  'checkbox',
+            id:    service.service_type,
+            name:  service.service_type,
+            value: service.id
+          })).append($(document.createElement('label')).attr({
+            for: service.service_type,
+            class: "service-labels"
+          }).append(service.service_type + " (" + service.sub_category + ")")
+          );
+      }
+    });
   });
+
+  // SELECT SERVICES
+  var selectedServices = [];
+  $('.submit-btn').click(function() {
+    selectedServices = $('input:checked').map(function() {
+      return $(this).val();
+    });
+    var params = selectedServices.get(); // convert to array
+    axios.patch('v1/providers/' + id, params).then(function(response) {
+      services = response.data.services;
+    });
+  });
+
   /*----------------------------
   ----------------------------*/ 
 
@@ -85,7 +117,9 @@ $(document).ready(function() {
 
 
 
-
+  /*----------------------------
+    GET USER DATA FROM BACKEND
+  ----------------------------*/   
   axios.get("v1/providers/" + id).then(function(response) {
     id = response.data.id;
     firstName = response.data.first_name;
@@ -107,5 +141,7 @@ $(document).ready(function() {
     //   });
 
   });
+  /*----------------------------
+  ----------------------------*/
 
 });

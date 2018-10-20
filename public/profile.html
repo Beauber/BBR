@@ -101,17 +101,42 @@
 						
 						<!-- ADD SERVICES Modal -->
 					  <div id="modal" class="modal services-modal">
-					    <div class="modal-content">
+					    <div class="modal-content choose-services">
 					    	<h2>Select Your Services...</h2>
 					  		<!-- <img src="images/beauber-logo.png" alt="" class="modal-logo"> -->
-					      <div class="input-field s4 user-div">
-									<select name="select-services" class="serviceList">
-										<option value="">Select a service...</option>
-									</select>
+					      <div>
+									<div class="service-icon-divs" id="hair-div">
+										<img src="images/services-icons/hair.png" alt="" class="services-icon" id='hair'>
+										<div class='centered-description'>
+											<div class='service-description'>Hair</div>
+										</div>
+									</div>
+									<div class="service-icon-divs" id="face-div">
+										<img src="images/services-icons/face.png" alt="" class="services-icon" id='face'>
+										<div class='centered-description'>
+											<div class='service-description'>Face</div>
+										</div>
+									</div>
+									<div class="service-icon-divs" id="nails-div">
+										<img src="images/services-icons/nails.png" alt="" class="services-icon" id='nails'>
+										<div class='centered-description'>
+											<div class='service-description'>Nails</div>
+										</div>
+									</div>
 								</div>
-								<div class="input-field s4 provider-div">
-									<input type="submit" value="SUBMIT" class="waves-effect waves-light log-in-btn submit-btn"> 
+					    </div>
+					  </div>
+					  <!-- End of Modal -->
+
+						<!-- ADD SERVICES Modal -->
+					  <div id="modal" class="modal selected-category-modal">
+					    <div class="modal-content choose-services">
+					    	<h2 class="selected-category-heading"></h2>
+								<div class="service-icon-divs">
+									<img src="" alt="" class="selected-category-icon">
 								</div>
+								<div class="checkboxes"></div>
+								<a class="waves-effect waves-light btn-large full-btn list-pg-btn submit-btn" href="">SUBMIT</a>
 					    </div>
 					  </div>
 					  <!-- End of Modal -->

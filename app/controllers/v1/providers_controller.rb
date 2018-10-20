@@ -26,13 +26,13 @@ class V1::ProvidersController < ApplicationController
   end
 
   def show
-    # provider = Provider.find(params[:id])
     render json: current_provider.as_json
   end
 
   def update
     provider = current_provider
-    provider.update(params)
+    # binding.pry
+    provider.update_services(params["_json"])
 
     render json: provider.as_json
   end

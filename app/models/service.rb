@@ -5,6 +5,7 @@ class Service < ApplicationRecord
 
   def as_json
     {
+      id: id,
       service_type: service_type,
       sub_category: sub_category.sub_category,
       category: sub_category.category.category
