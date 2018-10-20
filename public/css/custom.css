@@ -200,12 +200,12 @@
   margin-right: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
-  transition: background-color, 1s;
+  transition: background-color, 0.5s;
 }
 
 .services-icon:hover {
   background-color: grey;
-  opacity: 0.3;
+  opacity: 0.1;
 }
 
 .service-icon-divs {
@@ -260,6 +260,22 @@ label.service-labels {
 @media screen and (max-width: 903px) {
   .choose-services {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 677px) {
+  .centered-description {
+    /*display: block;*/
+    transition: none;
+    opacity: 1;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif
+    top: 0%;
+    padding-left: 0px;
+    position: relative;
+    margin-bottom: 15px;
   }
 }
 
