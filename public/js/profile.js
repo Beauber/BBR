@@ -2,8 +2,12 @@
 
 $(document).ready(function() {
 
-  axios.defaults.headers.common["Authorization"] =
+  if (localStorage.getItem("jwt")) {
+    axios.defaults.headers.common["Authorization"] =
           "Bearer " + localStorage.getItem("jwt");
+  } else {
+    window.location.replace("/login");
+  }
 
   var id = localStorage.getItem("id");
   var firstName;
