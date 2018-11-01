@@ -46,27 +46,34 @@
 			<div class="row">
 				<div class="dir-hr1">
 					<div class="dir-ho-t-tit dir-ho-t-tit-2">
-						<h1>Connect With a Beautician or Barber in Your Area</h1> 
-						<p>Enter Your Zip Code and<br> Choose the Service You're Looking For</p>
+						<h1>Connect With a<br>Beautician or Barber<br>In Your Area</h1> 
+						<p>Choose a Category for the Service You're Looking For</p>
 					</div>
-						<form class="tourz-search-form">
+						<div class="category-search">
+						<!-- <form class="category-search"> -->
 							<div class="input-field">
-								<input type="text" id="select-city" class="autocomplete">
-								<label for="select-city">Enter city</label>
-							</div>
-							<div class="input-field">
-								<!-- <input type="text" id="select-search" class="autocomplete"> -->
-								<!-- <label for="select-search" class="search-hotel-type">Search your services like hotel, resorts, events and more</label> -->
-								<select name="categories">
-									<option value="">Choose a Category</option>
+								<select name="categories" id="selected-category">
+									<option value="" selected disabled>Choose a Category...</option>
 									<option value="1">Hair</option>
 									<option value="2">Face</option>
 									<option value="3">Nails</option>
 								</select>
 							</div>
-							<div class="input-field">
-								<input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn"> </div>
-						</form>
+							<div class="input-field sub-category-select">
+								<select name="sub-categories" id="selected-sub-category">
+									<option value="" selected disabled>Choose a Sub-Category...</option>
+								</select>
+							</div>
+							<div class="input-field service-select">
+								<select name="services" id="selected-service">
+									<option value="" selected disabled>Choose a Service...</option>
+								</select>
+							</div>
+							<!-- <div class="input-field">
+								<input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn category-search-btn"> 
+							</div> -->
+						</div>
+						<!-- </form> -->
 				</div>
 			</div>
 		</div>
@@ -241,6 +248,8 @@
 	<script src="js/bootstrap.js" type="text/javascript"></script>
 	<script src="js/materialize.min.js" type="text/javascript"></script>
 	<script src="js/custom.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+	<script src="js/user-index.js"></script>
 </body>
 
 </html>

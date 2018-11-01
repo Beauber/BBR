@@ -41,7 +41,7 @@ $(document).ready(function() {
     };
   });
 
-  // IF REGISTERING PROVIDER
+  // IF REGISTERING PROVIDER:
   $('.provider-btn').click(function() {
     provider = true;
     url = "/v1/providers";
@@ -182,15 +182,10 @@ $(document).ready(function() {
   }
 
   $('.reg-button').on('click', function() {
-    console.log("clicked");
     params;
     validateForm();
-    console.log("formIsReady:", formIsReady);
-    console.log("params:", params);
-    console.log("url:", url);
     if (formIsReady) {
       axios.post(url, params).then(function(response) {
-        console.log("web request");
 
         // Change center element from reg form to confirmation message
         $('.log-in-pop-right').fadeOut(1500);
@@ -210,7 +205,6 @@ $(document).ready(function() {
       }
       ).catch(
         function(error) {
-          console.log("errors");
 
           // Add errors in red to modal and display modal
           var errorMessage = error.response.data.errors;

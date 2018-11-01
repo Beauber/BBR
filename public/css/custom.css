@@ -299,6 +299,30 @@ label.service-labels {
   background-color: white;
 }
 
+.category-search {
+  width: 75%;
+  margin: auto;
+ }
+
+ .select-dropdown {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+ .select-dropdown * {
+  background-color: white;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  left: 10px;
+ }
+
+ .sub-category-select, .service-select {
+  display: none;
+ }
+
 /* -------------------------------------
      USER SEARCH PAGE RESPONSIVENESS
  --------------------------------------*/
