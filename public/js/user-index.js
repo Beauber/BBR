@@ -116,8 +116,9 @@ $(document).ready(function() {
   $('.all-services').on("change", function() {
     // GET ID OF SELECTED SERVICE!
     serviceText = $(this).find('.selected span').text();
+    console.log(serviceText);
     serviceId = $(this).find('option:contains(' + serviceText + ')').val();
-
+    console.log(serviceId);
     // GET PROVIDERS THAT OFFER SELECTED SERVICE
     axios.get("/v1/services/" + serviceId).then(function(response) {
       console.log(response.data);
