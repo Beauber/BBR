@@ -116,12 +116,14 @@ $(document).ready(function() {
   $('.all-services').on("change", function() {
     // GET ID OF SELECTED SERVICE!
     serviceText = $(this).find('.selected span').text();
-    console.log(serviceText);
+    // console.log(serviceText);
     serviceId = $(this).find('option:contains(' + serviceText + ')').val();
-    console.log(serviceId);
+    // console.log(serviceId);
     // GET PROVIDERS THAT OFFER SELECTED SERVICE
     axios.get("/v1/services/" + serviceId).then(function(response) {
-      console.log(response.data);
+      $('.results').empty();
+
+      // console.log(response.data);
       $('.results').css("display", "block");
       var providers = response.data;
       var count = providers.length;
