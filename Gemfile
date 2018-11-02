@@ -16,7 +16,7 @@ gem 'puma', '~> 3.11'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'knock'
-gem 'pry-rails'
+# gem 'pry-rails'
 gem 'figaro'
 
 # Use ActiveStorage variant

@@ -319,7 +319,35 @@ label.service-labels {
   left: 10px;
  }
 
- .sub-category-select, .service-select {
+ .hair-sub-category-select, .face-sub-category-select {
+  display: none;
+ }
+
+ .haircut-service-select, 
+ .haircolor-service-select, 
+ .hairstyling-service-select, 
+ .barbers-service-select, 
+ .texture-service-select, 
+ .extensions-service-select, 
+ .makeup-service-select, 
+ .skin-service-select, 
+ .eyebrows-service-select, 
+ .lashes-service-select, 
+ .nails-service-select {
+  display: none;
+ }
+
+ .all-hair-services, .all-face-services {
+  display: none;
+ }
+
+ .results {
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  margin-top: 50px;
+  padding: 2%;
+  border-radius: 4px;
   display: none;
  }
 

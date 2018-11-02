@@ -41,6 +41,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section id="background1" class="dir1-home-head">
 		<div class="container dir-ho-t-sp">
 			<div class="row">
@@ -49,8 +50,9 @@
 						<h1>Connect With a<br>Beautician or Barber<br>In Your Area</h1> 
 						<p>Choose a Category for the Service You're Looking For</p>
 					</div>
-						<div class="category-search">
-						<!-- <form class="category-search"> -->
+						<form class="category-search">
+						
+							<!-- REPLACE WITH DYNAMICALLY POPULATED SELECT ELEMENTS -->
 							<div class="input-field">
 								<select name="categories" id="selected-category">
 									<option value="" selected disabled>Choose a Category...</option>
@@ -59,154 +61,139 @@
 									<option value="3">Nails</option>
 								</select>
 							</div>
-							<div class="input-field sub-category-select">
-								<select name="sub-categories" id="selected-sub-category">
+						
+							<!-- SUB CATEGORIES -->
+							<div class="input-field hair-sub-category-select">
+								<select name="sub-categories" id="hair-sub-category">
 									<option value="" selected disabled>Choose a Sub-Category...</option>
+									<option value="1">Haircut</option>
+									<option value="2">Haircolor</option>
+									<option value="3">Hairstyling</option>
+									<option value="4">Barbers</option>
+									<option value="5">Hair Chemical Texture</option>
+									<option value="6">Hair Extensions</option>
 								</select>
 							</div>
-							<div class="input-field service-select">
-								<select name="services" id="selected-service">
-									<option value="" selected disabled>Choose a Service...</option>
+							<div class="input-field face-sub-category-select">
+								<select name="sub-categories" id="face-sub-category">
+									<option value="" selected disabled>Choose a Sub-Category...</option>
+									<option value="7">Makeup</option>
+									<option value="8">Skin</option>
+									<option value="9">Eyebrows</option>
+									<option value="10">Lashes</option>
 								</select>
 							</div>
-							<!-- <div class="input-field">
-								<input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn category-search-btn"> 
-							</div> -->
-						</div>
-						<!-- </form> -->
+						
+							<!-- SERVICES -->
+							<div class="all-services">
+								<div class="all-hair-services">
+									<div class="input-field haircut-service-select">
+										<select name="services" id="haircut-services">
+											<option value="" selected disabled>Choose a Service...</option>
+											<option value="1">Long</option>
+											<option value="2">Short/Pixie</option>
+											<option value="3">Curly</option>
+										</select>
+									</div>
+									<div class="input-field haircolor-service-select">
+										<select name="services" id="haircolor-services">
+											<option value="" selected disabled>Choose a Service...</option>
+											<option value="4">Root Retouch</option>
+											<option value="5">All Over Color</option>
+											<option value="6">Highlights</option>
+											<option value="7">Balayage</option>
+											<option value="8">Vivids</option>
+											<option value="9">Blondes</option>
+											<option value="10">Color Correction</option>
+										</select>
+									</div>
+									<div class="input-field hairstyling-service-select">
+										<select name="services" id="hairstyling-services">
+											<option value="" selected disabled>Choose a Service...</option>
+											<option value="11">Blowout</option>
+											<option value="12">Updos</option>
+											<option value="13">Bridal</option>
+											<option value="14">Wigs</option>
+										</select>
+									</div>
+									<div class="input-field barbers-service-select">
+										<select name="services" id="barbers-services">
+											<option value="" selected disabled>Choose a Service...</option>
+											<option value="15">Haircut</option>
+											<option value="16">Beard</option>
+											<option value="17">Haircolor for Men</option>
+										</select>
+									</div>
+									<div class="input-field texture-service-select">
+										<select name="services" id="texture-services">
+											<option value="" selected disabled>Choose a Service...</option>
+											<option value="18">Keratin Service</option>
+											<option value="19">Perms</option>
+											<option value="20">Relaxers</option>
+										</select>
+									</div>
+									<div class="input-field extensions-service-select">
+										<select name="services" id="extensions-services">
+											<option value="" selected disabled>Choose a Service...</option>	
+											<option value="21">Tape</option>
+											<option value="22">Weaved</option>
+											<option value="23">Halo/Hairband</option>
+											<option value="24">Bonded</option>
+											<option value="25">Weft</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="all-face-services">
+									<div class="input-field makeup-service-select">
+										<select name="services" id="makeup-services">
+											<option value="" selected disabled>Choose a Service...</option>
+											<option value="26">Cosmetic/Fashion</option>
+											<option value="27">Bridal/Special Occasion</option>
+											<option value="28">Film/Tv/Theater</option>
+										</select>
+									</div>
+									<div class="input-field skin-service-select">
+										<select name="services" id="skin-services">
+											<option value="" selected disabled>Choose a Service...</option>
+											<option value="29">Facials</option>
+											<option value="30">Back Facial</option>
+										</select>
+									</div>
+									<div class="input-field eyebrows-service-select">
+										<select name="services" id="eyebrows-services">
+											<option value="" selected disabled>Choose a Service...</option>
+											<option value="31">Wax/Tweezers</option>
+											<option value="32">Threading</option>
+											<option value="33">Microblading</option>
+										</select>
+									</div>
+									<div class="input-field lashes-service-select">
+										<select name="services" id="lashes-services">
+											<option value="" selected disabled>Choose a Service...</option>
+											<option value="34">Extensions</option>
+											<option value="35">Perm/Dye</option>
+										</select>
+									</div>
+								</div>
+								<div class="input-field nails-service-select">
+									<select name="services" id="nails-services">
+										<option value="" selected disabled>Choose a Service...</option>
+										<option value="36">Manicure/Pedicure</option>
+										<option value="37">Gel Color</option>
+										<option value="38">Acrylic/Silk Extensions</option>
+										<option value="39">Nail Art</option>
+									</select>
+								</div>
+							</div>
+							<div class="results"></div>
+						</form>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- ADD THIS ALL IN LATER -->
-
-	<!--FIND YOUR SERVICE-->
-	<!-- <section class="cat-v2-hom com-padd mar-bot-red-m30">
-		<div class="container">
-			<div class="row">
-				<div class="com-title">
-					<h2>Find a <span>Service</span></h2>
-					<p>Explore the Services Offered by our Talented Professionals</p>
-				</div>
-				<div class="cat-v2-hom-list">
-					<ul>
-						<li>
-							<a href="#"><img src="images/icon/hcat1.png" alt=""> Hospitals</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat2.png" alt=""> Hotel & Resort</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat3.png" alt=""> Events</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat4.png" alt=""> Wedding Halls</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat5.png" alt=""> Shops</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat6.png" alt=""> Fitness & Gym</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat7.png" alt=""> Sports</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat8.png" alt=""> Education</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat9.png" alt=""> Electricals</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat10.png" alt=""> Automobiles</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat11.png" alt=""> Real Estates</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat12.png" alt=""> Import & Export</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat13.png" alt=""> Interior Design</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat14.png" alt=""> Software Solutions</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/icon/hcat15.png" alt=""> Yoga Training</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!--EXPLORE CITY LISTING-->
-	<!-- <section class="com-padd com-padd-redu-top">
-		<div class="container">
-			<div class="row">
-				<div class="com-title">
-					<h2>Explore Services in Your City</h2>
-					<p>Explore some of the best barbers and beauticians in your city.</p>
-				</div>
-				<div class="col-md-6">
-					<a href="list-lead.html">
-						<div class="list-mig-like-com">
-							<div class="list-mig-lc-img"> <img src="images/listing/home.jpg" alt="" /> </div>
-							<div class="list-mig-lc-con">
-								<h5>United States</h5>
-								<p>21 Cities . 2045 Listings . 3648 Users</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="list-lead.html">
-						<div class="list-mig-like-com">
-							<div class="list-mig-lc-img"> <img src="images/listing/home2.jpg" alt="" /> </div>
-							<div class="list-mig-lc-con list-mig-lc-con2">
-								<h5>United Kingdom</h5>
-								<p>18 Cities . 1454 Listings</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="list-lead.html">
-						<div class="list-mig-like-com">
-							<div class="list-mig-lc-img"> <img src="images/listing/home3.jpg" alt="" /> </div>
-							<div class="list-mig-lc-con list-mig-lc-con2">
-								<h5>Australia</h5>
-								<p>14 Cities . 1895 Listings</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="list-lead.html">
-						<div class="list-mig-like-com">
-							<div class="list-mig-lc-img"> <img src="images/listing/home4.jpg" alt="" /> </div>
-							<div class="list-mig-lc-con list-mig-lc-con2">
-								<h5>Germany</h5>
-								<p>12 Cities . 1260 Listings</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="list-lead.html">
-						<div class="list-mig-like-com">
-							<div class="list-mig-lc-img"> <img src="images/listing/home1.jpg" alt="" /> </div>
-							<div class="list-mig-lc-con list-mig-lc-con2">
-								<h5>India</h5>
-								<p>24 Cities . 4152 Listings</p>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section> -->
+	
 	<!--FOOTER SECTION-->
 	<footer id="colophon" class="site-footer clearfix">
 		<div data-section="section">
@@ -214,9 +201,6 @@
 				<div class="row">
 					<div class="col-sm-4 col-md-3 foot-logo reg-footer"> 
 						<img src="images/beauber-logo.png" alt="logo">
-						<!-- <p class="hasimg">Your go-to resource to find a beauty or barber professional.</p>
-						<p class="hasimg">Clients: Find a professional near you to provide the specific service you need from hair to nails to makeup to beards...</p>
-						<p class="hasimg">Professionals: Connect with clients in your area in need of the specific services you offer.</p> -->
 					</div>
 				</div>
 				<div class="foot-social">

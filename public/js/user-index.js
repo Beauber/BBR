@@ -3,87 +3,145 @@
 $(document).ready(function() {
 
   var categoryId = null;
+  var subCategoryId = null;
+  var serviceText;
+  var serviceId;
 
-  // $('.category-search-btn').on('click', function() {
   $('#selected-category').on('change', function() {
     categoryId = $('#selected-category').val();
     if (categoryId) {
-      
-      axios.get('/v1/categories/' + categoryId).then(function(response) {
-        let subCategories = response.data.sub_categories;
-        console.log("Sub-categories: ", subCategories);
-        let services = response.data.services;
-        console.log("Services: ", services);
-
-        if (subCategories.length > 1) {
-          $('.sub-category-select').css("display", "block");
-          $('.service-select').css("display", "none");
-
-          // POPULATE SUB-CATEGORIES IN SELECT DROPDOWN
-          subCategories.forEach(function(sc) {
-            $('#sub-category-select')
-              .append("<option value='" + sc + "'>" + sc + "</option>");
-            $('.sub-category-select')
-              .find('ul')
-              .append('<li class><span>' + sc + '</span></li>');
-          });
-          $('.sub-category-select').find('li').on("click", function() {
-            $(this).attr("class", "active selected");
-          });
-
-        } else {
-          // FOR CATEGORIES LIKE NAILS WITH ONE (basically no) SUBCATEGORIES
-          // SHOW SERVICES AND HIDE SUBCATEGORIES
-          $('.service-select').css("display", "block");
-          $('.sub-category-select').css("display", "none");
-        }
-
-        // SHOW SERVICES WHEN SUBCATEGORY IS SELECTED
-        $('#selected-sub-category').on('change', function() {
-          $('.service-select').css("display", "block");
-        });
-
-
-
-
-
-        // ------LOCATION CODE--------
-        // let location;
-        // navigator.geolocation.getCurrentPosition(function(locationData) {
-        //   location = locationData;
-        //   let lat = location.coords.latitude;
-        //   let lon = location.coords.longitude;
-        //   let key = ENV["GOOGLE-API-KEY"];
-        //   console.log("Lat: ", lat);
-        //   console.log("Lon: ", lon);
-        //   axios.get(
-        //     'http://maps.googleapis.com/maps/api/distancematrix/json' +
-        //     '?origin=' + lat + ',' + lon +
-        //     '&destination=' + '90210' +
-        //     '&key=' + key
-        //   ).then(function(response) {
-        //     console.log(response);
-        //   });
-        // });
-        // ----------------------------
-      }).catch(
-        function(error) {
-          console.log("Error: ", error);
-          // // Add errors in red to modal and display modal
-          // var errorMessage = error.response.data.errors;
-          // var errorList = [];
-          // errorMessage.forEach(function(msg) {
-          //   $('.error-list').append("<li>" + msg + "</li>");
-          // });
-          // $('.error-modal').css("display", "block");
-
-          // // Close modal when user clicks anywhere on page and empty error list until next submit
-          // $('body').on("click", function() {
-          //   $('.error-modal').css("display", "none");
-          //   $('.error-list').html("");
-        } 
-      );
+      // console.log(categoryId);
+      if (categoryId === "1") {
+        $('.hair-sub-category-select').css("display", "block");
+        $('.face-sub-category-select').css("display", "none");
+        $('.nails-service-select').css("display", "none");
+        $('.all-face-services').css("display", "none");
+      } else if (categoryId === "2") {
+        $('.face-sub-category-select').css("display", "block");
+        $('.hair-sub-category-select').css("display", "none");
+        $('.nails-service-select').css("display", "none");
+        $('.all-hair-services').css("display", "none");
+      } else if (categoryId === "3") {
+        $('.nails-service-select').css("display", "block");
+        $('.face-sub-category-select').css("display", "none");
+        $('.hair-sub-category-select').css("display", "none");
+        $('.all-hair-services').css("display", "none");
+        $('.all-face-services').css("display", "none");
+      } 
     }
   });
+
+  $('#hair-sub-category').on('change', function() {
+    subCategoryId = $('#hair-sub-category').val();
+    var serviceText = null;
+    if (subCategoryId) {
+      $('.all-hair-services').css("display", "block");
+      // console.log(subCategoryId);
+      if (subCategoryId === "1") {
+        $('.haircut-service-select').css("display", "block");
+        $('.haircolor-service-select').css("display", "none");
+        $('.hairstyling-service-select').css("display", "none");
+        $('.barbers-service-select').css("display", "none");
+        $('.texture-service-select').css("display", "none");
+        $('.extensions-service-select').css("display", "none");
+      } else if (subCategoryId === "2") {
+        $('.haircolor-service-select').css("display", "block");
+        $('.haircut-service-select').css("display", "none");
+        $('.hairstyling-service-select').css("display", "none");
+        $('.barbers-service-select').css("display", "none");
+        $('.texture-service-select').css("display", "none");
+        $('.extensions-service-select').css("display", "none");
+      } else if (subCategoryId === "3") {
+        $('.hairstyling-service-select').css("display", "block");
+        $('.haircut-service-select').css("display", "none");
+        $('.haircolor-service-select').css("display", "none");
+        $('.barbers-service-select').css("display", "none");
+        $('.texture-service-select').css("display", "none");
+        $('.extensions-service-select').css("display", "none");
+      } else if (subCategoryId === "4") {
+        $('.barbers-service-select').css("display", "block");
+        $('.haircut-service-select').css("display", "none");
+        $('.haircolor-service-select').css("display", "none");
+        $('.hairstyling-service-select').css("display", "none");
+        $('.texture-service-select').css("display", "none");
+        $('.extensions-service-select').css("display", "none");
+      } else if (subCategoryId === "5") {
+        $('.texture-service-select').css("display", "block");
+        $('.haircut-service-select').css("display", "none");
+        $('.haircolor-service-select').css("display", "none");
+        $('.hairstyling-service-select').css("display", "none");
+        $('.barbers-service-select').css("display", "none");
+        $('.extensions-service-select').css("display", "none");
+      } else if (subCategoryId === "6") {
+        $('.extensions-service-select').css("display", "block");
+        $('.haircut-service-select').css("display", "none");
+        $('.haircolor-service-select').css("display", "none");
+        $('.hairstyling-service-select').css("display", "none");
+        $('.barbers-service-select').css("display", "none");
+        $('.texture-service-select').css("display", "none");
+      } 
+    }
+  });
+
+  $('#face-sub-category').on('change', function() {
+    subCategoryId = $('#face-sub-category').val();
+    var serviceText = null;
+    if (subCategoryId) {
+      $('.all-face-services').css("display", "block");
+      // console.log(subCategoryId);
+      if (subCategoryId === "7") {
+        $('.makeup-service-select').css("display", "block");
+        $('.skin-service-select').css("display", "none");
+        $('.eyebrows-service-select').css("display", "none");
+        $('.lashes-service-select').css("display", "none");
+      } else if (subCategoryId === "8") {
+        $('.skin-service-select').css("display", "block");
+        $('.makeup-service-select').css("display", "none");
+        $('.eyebrows-service-select').css("display", "none");
+        $('.lashes-service-select').css("display", "none");
+      } else if (subCategoryId === "9") {
+        $('.eyebrows-service-select').css("display", "block");
+        $('.makeup-service-select').css("display", "none");
+        $('.skin-service-select').css("display", "none");
+        $('.lashes-service-select').css("display", "none");
+      } else if (subCategoryId === "10") {
+        $('.lashes-service-select').css("display", "block");
+        $('.makeup-service-select').css("display", "none");
+        $('.skin-service-select').css("display", "none");
+        $('.eyebrows-service-select').css("display", "none");
+      } 
+    }
+  });
+
+  $('.all-services').on("change", function() {
+    // GET ID OF SELECTED SERVICE!
+    serviceText = $(this).find('.selected span').text();
+    serviceId = $(this).find('option:contains(' + serviceText + ')').val();
+
+    // GET PROVIDERS THAT OFFER SELECTED SERVICE
+    axios.get("/v1/services/" + serviceId).then(function(response) {
+      console.log(response.data);
+      $('.results').css("display", "block");
+      var providers = response.data;
+      var count = providers.length;
+      if (count > 0) {
+        providers.forEach(function(provider) {
+          $('.results').append("<p> There were " + count + " result(s) near you!</p>");
+          $('.results').append("<p> Name: " 
+            + provider.first_name
+            + " "
+            + provider.last_name
+            + "<br>"
+            + " Zip: "
+            + provider.zip
+            + "</p>");
+          console.log(provider);
+        });
+      } else { 
+        $('.results').append("<p> There were no results near you  :( </p>");
+      }
+    });
+  });
+
 
 });
