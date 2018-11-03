@@ -143,6 +143,10 @@ $(document).ready(function() {
       } else { 
         $('.results').append("<p> There were no results near you  :( </p>");
       }
+    }).catch(function(error) {
+      // TEMPORARY
+      $('.results').empty();
+      $('.results').append("<p> There were no results near you  :( </p>");
     });
   });
 
