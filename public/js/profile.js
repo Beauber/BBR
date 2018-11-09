@@ -101,6 +101,7 @@ $(document).ready(function() {
   });
 
   /*----------------------------
+        END OF ADD SERVICES
   ----------------------------*/ 
 
 
@@ -117,6 +118,7 @@ $(document).ready(function() {
   });
 
   /*----------------------------
+      END OF CONTACT PROVIDER
   ----------------------------*/
 
 
@@ -146,6 +148,7 @@ $(document).ready(function() {
 
   });
   /*----------------------------
+      END OF GET USER DATA
   ----------------------------*/
 
 });

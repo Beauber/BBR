@@ -63,6 +63,8 @@
   text-align: center;
 }
 
+
+
 #centered-modal {
   text-align: center;
 }
@@ -131,6 +133,12 @@
   font-size: 1.3em;
 }
 
+#user-btn, #provider-btn {
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
 .welcome-modal {
   z-index: 999;
   background-color: rgba(255, 255, 255, 0.9);
@@ -141,31 +149,6 @@
   color: white;
 }
 
-@media screen and (max-width: 1200px) {
-  
-  .modal-logo {
-    width: 80%;
-    border-radius: 5px;
-    margin-bottom: 8px;
-  }
-
-  .welcome {
-    width: 60%;
-  }
-  
-}
-
-@media screen and (max-width: 767px) {
-
-  .welcome {
-    width: 90%;
-  }
-
-  .user-btn, .provider-btn {
-    width: 26rem;
-  }
-
-}
 
 /* --------------------------- 
       PROFILE PAGE 
@@ -241,51 +224,6 @@ label.service-labels {
   margin-top: 20px;
 }
 
-/* -------------------------------------
- CHOOSE SERVICES MODAL RESPONSIVENESS 
- --------------------------------------*/
-
-@media screen and (max-width: 1355px) {
-  .choose-services {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 1086px) {
-  .choose-services {
-    width: 60%;
-  }
-}
-
-@media screen and (max-width: 903px) {
-  .choose-services {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 677px) {
-  .centered-description {
-    transition: none;
-    opacity: 1;
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-family: 'Quicksand', sans-serif
-    top: 0%;
-    padding-left: 0px;
-    position: relative;
-    margin-bottom: 15px;
-  }
-}
-
-@media screen and (max-width: 534px) {
-  .choose-services {
-    width: 98%;
-    background-color: rgba(255, 255, 255, 1);
-  }
-}
-
-
 /* --------------------------- 
       USER SEARCH PAGE 
 --------------------------- */
@@ -355,4 +293,78 @@ label.service-labels {
      USER SEARCH PAGE RESPONSIVENESS
  --------------------------------------*/
 
- 
+
+
+ /* --------------------------------------------
+     REGISTRATION WELCOME MODAL RESPONSIVENESS
+  ---------------------------------------------*/
+
+ @media screen and (max-width: 1200px) {
+  
+  .modal-logo {
+    width: 80%;
+    border-radius: 5px;
+    margin-bottom: 8px;
+  }
+
+  .welcome {
+    width: 60%;
+  }
+  
+}
+
+@media screen and (max-width: 767px) {
+
+  .welcome {
+    width: 90%;
+  }
+
+  .user-btn, .provider-btn {
+    width: 26rem;
+  }
+
+}
+
+ /* -------------------------------------
+ CHOOSE SERVICES MODAL RESPONSIVENESS 
+ --------------------------------------*/
+
+@media screen and (max-width: 1355px) {
+  .choose-services {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1086px) {
+  .choose-services {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 903px) {
+  .choose-services {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 677px) {
+  .centered-description {
+    transition: none;
+    opacity: 1;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif
+    top: 0%;
+    padding-left: 0px;
+    position: relative;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 534px) {
+  .choose-services {
+    width: 98%;
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
